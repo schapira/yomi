@@ -1,0 +1,158 @@
+
+
+    {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "definitions": {},
+        "id": "http://example.com/example.json",
+        "properties": {
+            "data": {
+                "id": "/properties/data",
+                "properties": {
+                    "data": {
+                        "description": "in case of text will be te text itself, in case of media, in here should be a link to the media fiie (direct link)",
+                        "id": "/properties/data/properties/data",
+                        "title": "the data itself",
+                        "type": "string"
+                    },
+                    "format": {
+                        "description": "should be one of: TEXT,VIDEO,AUDIO,IMAGE",
+                        "id": "/properties/data/properties/format",
+                        "title": "the format of the data",
+                        "type": "string"
+                    },
+                    "language": {
+                        "description": "posible: HE, EN, FR...",
+                        "id": "/properties/data/properties/language",
+                        "title": "the language of the data",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "will be shown in the app as the item title",
+                        "id": "/properties/data/properties/title",
+                        "title": "the title of the item",
+                        "type": "string"
+                    },
+                    "type": {
+                        "id": "/properties/data/properties/type",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "data",
+                    "format",
+                    "type",
+                    "language",
+                    "title"
+                ],
+                "type": "object"
+            },
+            "partner": {
+                "id": "/properties/partner",
+                "properties": {
+                    "email": {
+                        "id": "/properties/partner/properties/email",
+                        "type": "string"
+                    },
+                    "homepage": {
+                        "id": "/properties/partner/properties/homepage",
+                        "type": "string"
+                    },
+                    "image": {
+                        "id": "/properties/partner/properties/image",
+                        "type": "string"
+                    },
+                    "name": {
+                        "id": "/properties/partner/properties/name",
+                        "type": "string"
+                    },
+                    "phone": {
+                        "id": "/properties/partner/properties/phone",
+                        "type": "string"
+                    },
+                    "role": {
+                        "description": "most have at least one partner that is CREATOR. other options: PRESENTOR, ect",
+                        "id": "/properties/partner/properties/role",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "role"
+                ],
+                "type": "object"
+            },
+            "provider": {
+                "id": "/properties/provider",
+                "properties": {
+                    "email": {
+                        "id": "/properties/provider/properties/email",
+                        "type": "string"
+                    },
+                    "homepage": {
+                        "id": "/properties/provider/properties/homepage",
+                        "type": "string"
+                    },
+                    "logo": {
+                        "id": "/properties/provider/properties/logo",
+                        "type": "string"
+                    },
+                    "name": {
+                        "id": "/properties/provider/properties/name",
+                        "type": "string"
+                    },
+                    "phone": {
+                        "id": "/properties/provider/properties/phone",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "phone",
+                    "name",
+                    "email"
+                ],
+                "type": "object"
+            },
+            "time": {
+                "id": "/properties/time",
+                "properties": {
+                    "date": {
+                        "id": "/properties/time/properties/date",
+                        "type": "string"
+                    },
+                    "daynum": {
+                        "id": "/properties/time/properties/daynum",
+                        "type": "string"
+                    },
+                    "source": {
+                        "id": "/properties/time/properties/source",
+                        "properties": {
+                            "0": {
+                                "id": "/properties/time/properties/source/properties/0",
+                                "type": "string"
+                            },
+                            "1": {
+                                "id": "/properties/time/properties/source/properties/1",
+                                "type": "string"
+                            },
+                            "2": {
+                                "id": "/properties/time/properties/source/properties/2",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "source"
+                ],
+                "type": "object"
+            }
+        },
+        "required": [
+            "time",
+            "data",
+            "provider"
+        ],
+        "type": "object"
+    }
+
